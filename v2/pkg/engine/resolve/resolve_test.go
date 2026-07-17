@@ -22,9 +22,9 @@ import (
 
 	"github.com/wundergraph/astjson"
 
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/ast"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/datasource/httpclient"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/testing/flags"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/ast"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/datasource/httpclient"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/testing/flags"
 )
 
 type _fakeDataSource struct {

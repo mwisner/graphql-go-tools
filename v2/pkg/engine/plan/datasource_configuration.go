@@ -7,9 +7,9 @@ import (
 	"github.com/cespare/xxhash/v2"
 	"github.com/jensneuse/abstractlogger"
 
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/ast"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/astvisitor"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/resolve"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/ast"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/astvisitor"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/resolve"
 )
 
 type DSHash uint64

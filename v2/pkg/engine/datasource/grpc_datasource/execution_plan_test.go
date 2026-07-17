@@ -6,12 +6,12 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/stretchr/testify/require"
 
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/ast"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/astparser"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/asttransform"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/astvalidation"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/grpctest"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/internal/unsafeparser"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/ast"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/astparser"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/asttransform"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/astvalidation"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/grpctest"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/internal/unsafeparser"
 )
 
 type testCase struct {

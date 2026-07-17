@@ -14,10 +14,10 @@ import (
 	"golang.org/x/net/http2/h2c"
 	"google.golang.org/grpc/metadata"
 
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/astparser"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/plan"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/grpctest"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/grpctest/productv1/productv1connect"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/astparser"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/plan"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/grpctest"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/grpctest/productv1/productv1connect"
 )
 
 // setupTestConnectServer starts an httptest server backed by the

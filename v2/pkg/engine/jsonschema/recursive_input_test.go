@@ -7,7 +7,7 @@ import (
 	"github.com/santhosh-tekuri/jsonschema/v5"
 	"github.com/stretchr/testify/require"
 
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/astparser"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/astparser"
 )
 
 // TestRecursiveInputAcceptsNestedPayload verifies that a self-recursive GraphQL

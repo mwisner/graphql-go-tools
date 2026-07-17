@@ -3,10 +3,10 @@ package introspection_datasource
 import (
 	"errors"
 
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/ast"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/plan"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/resolve"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/introspection"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/ast"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/plan"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/resolve"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/introspection"
 )
 
 type Configuration struct {

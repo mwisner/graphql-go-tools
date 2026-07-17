@@ -5,7 +5,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/pool"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/pool"
 )
 
 // InboundRequestSingleFlight is a sharded goroutine safe single flight implementation to de-couple inbound requests

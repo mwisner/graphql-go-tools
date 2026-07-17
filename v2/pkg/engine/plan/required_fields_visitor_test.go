@@ -6,8 +6,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/astprinter"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/internal/unsafeparser"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/astprinter"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/internal/unsafeparser"
 )
 
 func TestAddRequiredFields(t *testing.T) {

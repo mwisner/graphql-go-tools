@@ -3,7 +3,7 @@ package postprocess
 import (
 	"slices"
 
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/resolve"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/resolve"
 )
 
 // orderSequenceByDependencies is a postprocessor that orders the fetch tree nodes by their dependencies.

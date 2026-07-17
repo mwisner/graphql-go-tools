@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/ast"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/ast"
 )
 
 func TestFetchTreeQueryPlanNode_PrettyPrint_Trigger(t *testing.T) {

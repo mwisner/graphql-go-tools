@@ -3,8 +3,8 @@ package postprocess
 import (
 	"strings"
 
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/ast"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/resolve"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/ast"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/resolve"
 )
 
 type PlanVisitor interface {

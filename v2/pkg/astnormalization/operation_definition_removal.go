@@ -3,8 +3,8 @@ package astnormalization
 import (
 	"bytes"
 
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/ast"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/astvisitor"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/ast"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/astvisitor"
 )
 
 func removeOperationDefinitions(walker *astvisitor.Walker) *removeOperationDefinitionsVisitor {

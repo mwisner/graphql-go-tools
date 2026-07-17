@@ -3,7 +3,7 @@ package astnormalization
 import (
 	"testing"
 
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/astvisitor"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/astvisitor"
 )
 
 func TestDeferExpandIntoInternal(t *testing.T) {

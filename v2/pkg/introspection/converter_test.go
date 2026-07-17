@@ -10,9 +10,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/astparser"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/astprinter"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/testing/goldie"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/astparser"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/astprinter"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/testing/goldie"
 )
 
 func TestJSONConverter_GraphQLDocument(t *testing.T) {

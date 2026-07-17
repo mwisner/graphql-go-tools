@@ -34,17 +34,17 @@ import (
 
 	"github.com/cespare/xxhash/v2"
 
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/ast"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/astnormalization"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/astparser"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/astprinter"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/asttransform"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/astvalidation"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/astvisitor"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/datasource/staticdatasource"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/plan"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/resolve"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/operationreport"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/ast"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/astnormalization"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/astparser"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/astprinter"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/asttransform"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/astvalidation"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/astvisitor"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/datasource/staticdatasource"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/plan"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/resolve"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/operationreport"
 )
 
 /*

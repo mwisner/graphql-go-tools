@@ -7,7 +7,7 @@ import (
 
 	"github.com/cespare/xxhash/v2"
 
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/pool"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/pool"
 )
 
 // SubgraphRequestSingleFlight is a sharded, goroutine safe single flight implementation to de-duplicate subgraph requests

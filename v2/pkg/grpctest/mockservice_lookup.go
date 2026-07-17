@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/grpctest/productv1"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/grpctest/productv1"
 )
 
 // LookupWarehouseById implements productv1.ProductServiceServer.

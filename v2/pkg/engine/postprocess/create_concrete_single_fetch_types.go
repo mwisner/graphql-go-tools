@@ -1,7 +1,7 @@
 package postprocess
 
 import (
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/resolve"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/resolve"
 )
 
 // createConcreteSingleFetchTypes is a postprocessor that transforms fetches into more concrete fetch types

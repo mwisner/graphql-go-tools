@@ -13,9 +13,9 @@ import (
 	"github.com/jensneuse/abstractlogger"
 	"github.com/rs/xid"
 
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/datasource/graphql_datasource/subscriptionclient/common"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/datasource/graphql_datasource/subscriptionclient/protocol"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/pool"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/datasource/graphql_datasource/subscriptionclient/common"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/datasource/graphql_datasource/subscriptionclient/protocol"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/pool"
 )
 
 // ErrDialFailed indicates that the WebSocket dial (TCP + HTTP upgrade) failed.

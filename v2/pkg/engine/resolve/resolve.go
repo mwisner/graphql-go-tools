@@ -1,4 +1,4 @@
-//go:generate mockgen -self_package=github.com/wundergraph/graphql-go-tools/v2/pkg/engine/resolve -destination=resolve_mock_test.go -package=resolve . DataSource
+//go:generate mockgen -self_package=github.com/mwisner/graphql-go-tools/v2/pkg/engine/resolve -destination=resolve_mock_test.go -package=resolve . DataSource
 
 package resolve
 
@@ -20,9 +20,9 @@ import (
 
 	"github.com/wundergraph/go-arena"
 
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/errorcodes"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/internal/xcontext"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/pool"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/errorcodes"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/internal/xcontext"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/pool"
 )
 
 const (

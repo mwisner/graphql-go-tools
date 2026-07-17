@@ -16,8 +16,8 @@ import (
 
 	"google.golang.org/grpc"
 
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/grpctest"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/grpctest/productv1"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/grpctest"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/grpctest/productv1"
 )
 
 func loggingInterceptor(

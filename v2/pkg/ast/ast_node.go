@@ -6,7 +6,7 @@ import (
 	"log"
 	"slices"
 
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/internal/unsafebytes"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/internal/unsafebytes"
 )
 
 type Node struct {

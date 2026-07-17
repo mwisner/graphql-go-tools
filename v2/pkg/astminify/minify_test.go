@@ -8,12 +8,12 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/astnormalization"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/asttransform"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/internal/unsafeparser"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/internal/unsafeprinter"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/operationreport"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/testing/goldie"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/astnormalization"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/asttransform"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/internal/unsafeparser"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/internal/unsafeprinter"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/operationreport"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/testing/goldie"
 )
 
 func BenchmarkMinify(b *testing.B) {

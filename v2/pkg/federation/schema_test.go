@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/testing/goldie"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/testing/goldie"
 )
 
 func TestSchemaBuilder_BuildFederationSchema(t *testing.T) {

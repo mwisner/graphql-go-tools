@@ -3,8 +3,8 @@ package astvalidation
 import (
 	"fmt"
 
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/ast"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/astvisitor"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/ast"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/astvisitor"
 )
 
 // ValidateEmptySelectionSets validates if selection sets are not empty

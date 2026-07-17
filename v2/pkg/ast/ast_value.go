@@ -8,10 +8,10 @@ import (
 
 	"github.com/buger/jsonparser"
 
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/internal/quotes"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/internal/unsafebytes"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/lexer/literal"
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/lexer/position"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/internal/quotes"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/internal/unsafebytes"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/lexer/literal"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/lexer/position"
 )
 
 type ValueKind int

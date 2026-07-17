@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/resolve"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/resolve"
 )
 
 func TestDeduplicateSingleFetches_ProcessFetchTree(t *testing.T) {

@@ -3,7 +3,7 @@ package mapping
 import (
 	"testing"
 
-	grpcdatasource "github.com/wundergraph/graphql-go-tools/v2/pkg/engine/datasource/grpc_datasource"
+	grpcdatasource "github.com/mwisner/graphql-go-tools/v2/pkg/engine/datasource/grpc_datasource"
 )
 
 // DefaultGRPCMapping returns a hardcoded default mapping between GraphQL and Protobuf

@@ -5,7 +5,7 @@ import (
 
 	"github.com/wundergraph/astjson"
 
-	"github.com/wundergraph/graphql-go-tools/v2/pkg/internal/unsafebytes"
+	"github.com/mwisner/graphql-go-tools/v2/pkg/internal/unsafebytes"
 )
 
 // getTaintedIndices identifies indices of malformed entities based on error paths
