@@ -20,13 +20,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/ast"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/astvalidation"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/datasource/httpclient"
-	. "github.com/mwisner/graphql-go-tools/v2/pkg/engine/datasourcetesting"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/plan"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/resolve"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/testing/subscriptiontesting"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/ast"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/astvalidation"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/datasource/httpclient"
+	. "github.com/wundergraph/graphql-go-tools/v2/pkg/engine/datasourcetesting"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/plan"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/resolve"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/testing/subscriptiontesting"
 )
 
 func mustSchema(t *testing.T, federationConfiguration *FederationConfiguration, schema string) *SchemaConfiguration {

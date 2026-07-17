@@ -6,13 +6,13 @@ import (
 	"runtime"
 	"sync"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/ast"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/internal/unsafebytes"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/lexer/identkeyword"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/lexer/keyword"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/lexer/position"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/lexer/token"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/operationreport"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/ast"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/internal/unsafebytes"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/lexer/identkeyword"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/lexer/keyword"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/lexer/position"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/lexer/token"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/operationreport"
 )
 
 var (

@@ -1,6 +1,6 @@
 package grpcdatasource
 
-import "github.com/mwisner/graphql-go-tools/v2/pkg/ast"
+import "github.com/wundergraph/graphql-go-tools/v2/pkg/ast"
 
 // initializeSlice initializes a slice with a given length and a given value.
 func initializeSlice[T any](len int, zero T) []T {

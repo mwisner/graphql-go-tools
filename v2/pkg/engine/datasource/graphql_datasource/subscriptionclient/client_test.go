@@ -13,7 +13,7 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.uber.org/goleak"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/datasource/graphql_datasource/subscriptionclient/common"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/datasource/graphql_datasource/subscriptionclient/common"
 )
 
 func TestClient(t *testing.T) {

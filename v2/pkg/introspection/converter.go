@@ -6,10 +6,10 @@ import (
 	"io"
 	"strings"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/ast"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/astimport"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/astparser"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/operationreport"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/ast"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/astimport"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/astparser"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/operationreport"
 )
 
 type JsonConverter struct {

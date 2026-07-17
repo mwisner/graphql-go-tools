@@ -6,7 +6,7 @@ import (
 
 	"github.com/cespare/xxhash/v2"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/datasource/httpclient"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/datasource/httpclient"
 )
 
 type DataSource interface {

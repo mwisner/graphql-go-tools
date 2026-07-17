@@ -8,12 +8,12 @@ import (
 
 	"github.com/wundergraph/astjson"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/ast"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/astnormalization"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/astnormalization/uploads"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/astvisitor"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/internal/unsafeparser"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/operationreport"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/ast"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/astnormalization"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/astnormalization/uploads"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/astvisitor"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/internal/unsafeparser"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/operationreport"
 )
 
 func TestUploadsFinder(t *testing.T) {

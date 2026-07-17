@@ -3,7 +3,7 @@ package postprocess
 import (
 	"sort"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/resolve"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/resolve"
 )
 
 // collectAuthorizationCoordinates is a post-processing step that records, on the response's

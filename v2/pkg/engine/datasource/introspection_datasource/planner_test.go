@@ -7,13 +7,13 @@ import (
 
 	"github.com/wundergraph/astjson"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/asttransform"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/datasourcetesting"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/plan"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/resolve"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/internal/unsafeparser"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/introspection"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/operationreport"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/asttransform"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/datasourcetesting"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/plan"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/resolve"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/internal/unsafeparser"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/introspection"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/operationreport"
 )
 
 const (

@@ -3,9 +3,9 @@ package astnormalization
 import (
 	"bytes"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/ast"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/astvisitor"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/lexer/literal"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/ast"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/astvisitor"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/lexer/literal"
 )
 
 // directiveIncludeSkip registers a visitor to handle @include and @skip directives.

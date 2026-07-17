@@ -8,8 +8,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	client "github.com/mwisner/graphql-go-tools/v2/pkg/engine/datasource/graphql_datasource/subscriptionclient"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/resolve"
+	client "github.com/wundergraph/graphql-go-tools/v2/pkg/engine/datasource/graphql_datasource/subscriptionclient"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/resolve"
 )
 
 type testBridgeUpdater struct {

@@ -3,7 +3,7 @@ package grpcdatasource
 import (
 	"strings"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/lexer/runes"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/lexer/runes"
 )
 
 // LookupFieldMapDefinition defines the mapping between a GraphQL field and a gRPC field

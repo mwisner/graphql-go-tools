@@ -7,7 +7,7 @@ import (
 
 	"google.golang.org/protobuf/types/known/wrapperspb"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/grpctest/productv1"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/grpctest/productv1"
 )
 
 // BlogPost query implementations

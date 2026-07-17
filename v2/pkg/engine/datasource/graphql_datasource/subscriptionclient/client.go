@@ -9,8 +9,8 @@ import (
 
 	"github.com/jensneuse/abstractlogger"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/datasource/graphql_datasource/subscriptionclient/common"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/datasource/graphql_datasource/subscriptionclient/transport"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/datasource/graphql_datasource/subscriptionclient/common"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/datasource/graphql_datasource/subscriptionclient/transport"
 )
 
 // ErrClientClosed is returned when Subscribe is called after the client's context has been canceled.

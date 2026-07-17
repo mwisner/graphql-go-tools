@@ -8,7 +8,7 @@ import (
 	connect "connectrpc.com/connect"
 	context "context"
 	errors "errors"
-	productv1 "github.com/mwisner/graphql-go-tools/v2/pkg/grpctest/productv1"
+	productv1 "github.com/wundergraph/graphql-go-tools/v2/pkg/grpctest/productv1"
 	http "net/http"
 	strings "strings"
 )

@@ -5,12 +5,12 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/ast"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/astparser"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/astprinter"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/asttransform"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/astvisitor"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/operationreport"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/ast"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/astparser"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/astprinter"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/asttransform"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/astvisitor"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/operationreport"
 )
 
 func BuildFederationSchema(baseSchema, serviceSDL string) (string, error) {

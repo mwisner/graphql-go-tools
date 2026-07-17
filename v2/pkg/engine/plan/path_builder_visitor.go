@@ -8,10 +8,10 @@ import (
 
 	"github.com/jensneuse/abstractlogger"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/ast"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/astvisitor"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/argument_templates"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/resolve"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/ast"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/astvisitor"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/argument_templates"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/resolve"
 )
 
 // pathBuilderVisitor - walks through the operation multiple times to collect plannings paths

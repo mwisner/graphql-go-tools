@@ -4,11 +4,11 @@ package astvalidation
 import (
 	"net/http"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/apollocompatibility"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/ast"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/astvisitor"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/errorcodes"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/operationreport"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/apollocompatibility"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/ast"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/astvisitor"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/errorcodes"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/operationreport"
 )
 
 type OperationValidatorOptions struct {

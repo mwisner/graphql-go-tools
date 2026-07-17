@@ -9,8 +9,8 @@ import (
 	"github.com/coder/websocket"
 	"github.com/jensneuse/abstractlogger"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/datasource/graphql_datasource/subscriptionclient/common"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/datasource/graphql_datasource/subscriptionclient/protocol"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/datasource/graphql_datasource/subscriptionclient/common"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/datasource/graphql_datasource/subscriptionclient/protocol"
 )
 
 // newTestWSConnection mirrors the defaults applied by client.New so that tests

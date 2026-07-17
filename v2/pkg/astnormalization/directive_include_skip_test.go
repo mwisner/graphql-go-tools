@@ -3,7 +3,7 @@ package astnormalization
 import (
 	"testing"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/astvisitor"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/astvisitor"
 )
 
 func TestDirectiveIncludeVisitor(t *testing.T) {

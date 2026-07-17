@@ -7,8 +7,8 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/datasource/httpclient"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/introspection"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/datasource/httpclient"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/introspection"
 )
 
 var (

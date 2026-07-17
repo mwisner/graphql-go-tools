@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/astparser"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/astparser"
 )
 
 func TestExecutionPlan_RecursiveInputTypes_String(t *testing.T) {

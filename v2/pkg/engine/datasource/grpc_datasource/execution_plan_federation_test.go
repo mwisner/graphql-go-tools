@@ -7,13 +7,13 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/ast"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/astparser"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/astvalidation"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/plan"
-	grpctest "github.com/mwisner/graphql-go-tools/v2/pkg/grpctest"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/internal/unsafeparser"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/operationreport"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/ast"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/astparser"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/astvalidation"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/plan"
+	grpctest "github.com/wundergraph/graphql-go-tools/v2/pkg/grpctest"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/internal/unsafeparser"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/operationreport"
 )
 
 func TestExecutionPlan_Federation_EntityLookup(t *testing.T) {

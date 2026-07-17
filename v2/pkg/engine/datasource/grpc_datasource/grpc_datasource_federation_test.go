@@ -9,9 +9,9 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/tidwall/gjson"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/astparser"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/plan"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/grpctest"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/astparser"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/plan"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/grpctest"
 )
 
 func Test_DataSource_Load_WithEntity_Calls(t *testing.T) {

@@ -6,10 +6,10 @@ import (
 
 	"github.com/jensneuse/abstractlogger"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/ast"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/datasource/httpclient"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/plan"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/resolve"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/ast"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/datasource/httpclient"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/plan"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/resolve"
 )
 
 type Factory[T Configuration] struct{}

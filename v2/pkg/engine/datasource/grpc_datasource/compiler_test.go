@@ -7,7 +7,7 @@ import (
 	"github.com/tidwall/gjson"
 	"google.golang.org/protobuf/reflect/protoreflect"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/grpctest"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/grpctest"
 )
 
 // Complete valid protobuf definition with service and message definitions

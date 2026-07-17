@@ -6,8 +6,8 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/stretchr/testify/require"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/astparser"
-	grpctest "github.com/mwisner/graphql-go-tools/v2/pkg/grpctest"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/astparser"
+	grpctest "github.com/wundergraph/graphql-go-tools/v2/pkg/grpctest"
 )
 
 func TestCompositeTypeExecutionPlan(t *testing.T) {

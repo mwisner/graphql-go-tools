@@ -13,8 +13,8 @@ import (
 	"connectrpc.com/connect"
 	"google.golang.org/grpc/metadata"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/grpctest/productv1"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/grpctest/productv1/productv1connect"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/grpctest/productv1"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/grpctest/productv1/productv1connect"
 )
 
 // connectCtxToGRPC bridges Connect HTTP headers onto a gRPC-style

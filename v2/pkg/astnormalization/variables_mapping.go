@@ -5,8 +5,8 @@ import (
 	"math"
 	"slices"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/ast"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/astvisitor"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/ast"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/astvisitor"
 )
 
 func remapVariables(walker *astvisitor.Walker) *variablesMappingVisitor {

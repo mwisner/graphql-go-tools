@@ -5,9 +5,9 @@ import (
 
 	"github.com/jensneuse/abstractlogger"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/ast"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/plan"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/introspection"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/ast"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/plan"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/introspection"
 )
 
 type Factory[T Configuration] struct {

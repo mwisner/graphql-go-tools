@@ -10,8 +10,8 @@ import (
 
 	"github.com/wundergraph/astjson"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/lexer/literal"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/pool"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/lexer/literal"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/pool"
 )
 
 type SubscriptionFilter struct {

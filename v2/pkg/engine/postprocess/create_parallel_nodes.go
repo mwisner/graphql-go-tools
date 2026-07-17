@@ -3,7 +3,7 @@ package postprocess
 import (
 	"slices"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/resolve"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/resolve"
 )
 
 type createParallelNodes struct {

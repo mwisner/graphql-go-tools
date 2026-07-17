@@ -4,8 +4,8 @@ import (
 	"cmp"
 	"slices"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/ast"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/operationreport"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/ast"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/operationreport"
 )
 
 const typeNameField = "__typename"

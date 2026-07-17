@@ -9,10 +9,10 @@ import (
 	"github.com/kylelemons/godebug/pretty"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/astvalidation"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/internal/unsafeparser"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/operationreport"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/testing/permutations"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/astvalidation"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/internal/unsafeparser"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/operationreport"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/testing/permutations"
 )
 
 type dsBuilder struct {

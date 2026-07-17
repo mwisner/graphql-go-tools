@@ -6,13 +6,13 @@ import (
 
 	"github.com/wundergraph/astjson"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/apollocompatibility"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/ast"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/astvisitor"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/errorcodes"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/federation"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/internal/unsafebytes"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/operationreport"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/apollocompatibility"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/ast"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/astvisitor"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/errorcodes"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/federation"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/internal/unsafebytes"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/operationreport"
 )
 
 type InvalidVariableError struct {

@@ -3,16 +3,16 @@ package graphql_datasource
 import (
 	"testing"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/astnormalization"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/asttransform"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/astvalidation"
-	. "github.com/mwisner/graphql-go-tools/v2/pkg/engine/datasourcetesting"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/plan"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/postprocess"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/resolve"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/internal/unsafeparser"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/internal/unsafeprinter"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/operationreport"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/astnormalization"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/asttransform"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/astvalidation"
+	. "github.com/wundergraph/graphql-go-tools/v2/pkg/engine/datasourcetesting"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/plan"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/postprocess"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/resolve"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/internal/unsafeparser"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/internal/unsafeprinter"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/operationreport"
 )
 
 func TestGraphQLDataSourceFederationEntityInterfaces(t *testing.T) {

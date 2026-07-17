@@ -4,9 +4,9 @@ package token
 import (
 	"fmt"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/ast"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/lexer/keyword"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/lexer/position"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/ast"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/lexer/keyword"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/lexer/position"
 )
 
 type Token struct {

@@ -11,8 +11,8 @@ import (
 	"github.com/coder/websocket"
 	"github.com/jensneuse/abstractlogger"
 
-	client "github.com/mwisner/graphql-go-tools/v2/pkg/engine/datasource/graphql_datasource/subscriptionclient"
-	"github.com/mwisner/graphql-go-tools/v2/pkg/engine/resolve"
+	client "github.com/wundergraph/graphql-go-tools/v2/pkg/engine/datasource/graphql_datasource/subscriptionclient"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/engine/resolve"
 )
 
 // subscriptionClientConfig holds the subscription client configuration.

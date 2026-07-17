@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"slices"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/ast"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/ast"
 )
 
 type FederationMetaData struct {

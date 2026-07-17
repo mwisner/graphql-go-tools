@@ -10,7 +10,7 @@ import (
 
 	"github.com/wundergraph/astjson"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/ast"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/ast"
 )
 
 type testFieldValueRenderer struct {

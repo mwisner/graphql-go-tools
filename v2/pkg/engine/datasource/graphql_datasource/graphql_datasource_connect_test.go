@@ -9,7 +9,7 @@ import (
 	"github.com/stretchr/testify/require"
 	protoref "google.golang.org/protobuf/reflect/protoreflect"
 
-	grpcdatasource "github.com/mwisner/graphql-go-tools/v2/pkg/engine/datasource/grpc_datasource"
+	grpcdatasource "github.com/wundergraph/graphql-go-tools/v2/pkg/engine/datasource/grpc_datasource"
 )
 
 func TestNewFactoryRPCTransport_NilCtx(t *testing.T) {

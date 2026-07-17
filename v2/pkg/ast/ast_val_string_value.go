@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"slices"
 
-	"github.com/mwisner/graphql-go-tools/v2/pkg/internal/unsafebytes"
+	"github.com/wundergraph/graphql-go-tools/v2/pkg/internal/unsafebytes"
 )
 
 // StringValue
