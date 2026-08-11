@@ -980,6 +980,28 @@ func (s *subscriptionState) sendHeartbeat() error {
 }
 
 func (r *Resolver) executeSubscriptionUpdate(resolveCtx *Context, sub *subscriptionState, sharedInput []byte) {
+	if singleFlightProbeEnabled() {
+		probeStarted := time.Now()
+		active := singleFlightProbeActiveSubscriptionUpdates.Add(1)
+		defer func() {
+			singleFlightProbeLog("subscription_update_done", map[string]any{
+				"trigger_id":                  sub.triggerID,
+				"connection_id":               sub.id.ConnectionID,
+				"subscription_id":             sub.id.SubscriptionID,
+				"event_hash":                  singleFlightProbeHash(sharedInput),
+				"duration_us":                 time.Since(probeStarted).Microseconds(),
+				"active_subscription_updates": singleFlightProbeActiveSubscriptionUpdates.Add(-1),
+			})
+		}()
+		singleFlightProbeLog("subscription_update_start", map[string]any{
+			"trigger_id":                  sub.triggerID,
+			"connection_id":               sub.id.ConnectionID,
+			"subscription_id":             sub.id.SubscriptionID,
+			"event_hash":                  singleFlightProbeHash(sharedInput),
+			"event_bytes":                 len(sharedInput),
+			"active_subscription_updates": active,
+		})
+	}
 	if r.options.Debug {
 		fmt.Printf("resolver:trigger:subscription:update:%d\n", sub.id.SubscriptionID)
 	}
@@ -1491,6 +1513,15 @@ func (r *Resolver) handleTriggerUpdate(id uint64, data []byte) {
 	}
 
 	subs, filterErrors := trig.filterSubscriptions(data)
+	if singleFlightProbeEnabled() {
+		singleFlightProbeLog("trigger_update", map[string]any{
+			"trigger_id":       id,
+			"event_hash":       singleFlightProbeHash(data),
+			"event_bytes":      len(data),
+			"subscriber_count": len(subs),
+			"filter_errors":    len(filterErrors),
+		})
+	}
 
 	for _, fe := range filterErrors {
 		fe.sub.writeError(r.errorFormatter, fe.ctx, fe.err, fe.response)

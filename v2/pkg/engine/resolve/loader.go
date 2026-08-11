@@ -1908,13 +1908,49 @@ func (l *Loader) loadByContext(ctx context.Context, source DataSource, fetchItem
 	}
 
 	headers, extraKey := l.headersForSubgraphRequest(fetchItem)
+	allowed := l.singleFlightAllowed(fetchItem)
+	var dataSourceID, dataSourceName, operationType string
+	if fetchItem != nil && fetchItem.Fetch != nil {
+		if info := fetchItem.Fetch.FetchInfo(); info != nil {
+			dataSourceID = info.DataSourceID
+			dataSourceName = info.DataSourceName
+			operationType = info.OperationType.String()
+		}
+	}
+	probe := singleFlightProbeEnabled() && singleFlightProbeMatchesDataSource(dataSourceName)
+	if probe {
+		singleFlightProbeLog("load_decision", map[string]any{
+			"data_source_id":                         dataSourceID,
+			"data_source_name":                       dataSourceName,
+			"operation_type":                         operationType,
+			"dedup_allowed":                          allowed,
+			"disable_subgraph_request_deduplication": l.ctx.ExecutionOptions.DisableSubgraphRequestDeduplication,
+			"body_hash":                              singleFlightProbeHash(input),
+			"body_bytes":                             len(input),
+			"header_hash":                            extraKey,
+			"active_subscription_updates":            singleFlightProbeActiveSubscriptionUpdates.Load(),
+		})
+	}
 
-	if !l.singleFlightAllowed(fetchItem) {
+	if !allowed {
 		// Disable single flight for mutations
 		return l.loadByContextDirect(ctx, source, headers, input, res)
 	}
 
+	lookupStarted := time.Now()
 	item, shared := l.singleFlight.GetOrCreateItem(fetchItem, input, extraKey)
+	if probe {
+		singleFlightProbeLog("singleflight_lookup", map[string]any{
+			"data_source_id":              dataSourceID,
+			"data_source_name":            dataSourceName,
+			"body_hash":                   singleFlightProbeHash(input),
+			"header_hash":                 extraKey,
+			"singleflight_key":            item.SFKey,
+			"shared":                      shared,
+			"role":                        map[bool]string{true: "follower", false: "leader"}[shared],
+			"active_subscription_updates": singleFlightProbeActiveSubscriptionUpdates.Load(),
+		})
+	}
 	if res.singleFlightStats != nil {
 		res.singleFlightStats.used = true
 		res.singleFlightStats.shared = shared
@@ -1924,7 +1960,23 @@ func (l *Loader) loadByContext(ctx context.Context, source DataSource, fetchItem
 		select {
 		case <-item.loaded:
 		case <-ctx.Done():
+			if probe {
+				singleFlightProbeLog("singleflight_follower_done", map[string]any{
+					"data_source_name": dataSourceName,
+					"singleflight_key": item.SFKey,
+					"wait_us":          time.Since(lookupStarted).Microseconds(),
+					"had_error":        true,
+				})
+			}
 			return ctx.Err()
+		}
+		if probe {
+			singleFlightProbeLog("singleflight_follower_done", map[string]any{
+				"data_source_name": dataSourceName,
+				"singleflight_key": item.SFKey,
+				"wait_us":          time.Since(lookupStarted).Microseconds(),
+				"had_error":        item.err != nil,
+			})
 		}
 
 		if item.err != nil {
@@ -1953,7 +2005,18 @@ func (l *Loader) loadByContext(ctx context.Context, source DataSource, fetchItem
 	// helps the http client to create buffers at the right size
 	ctx = httpclient.WithHTTPClientSizeHint(ctx, item.sizeHint)
 
-	defer l.singleFlight.Finish(item)
+	defer func() {
+		l.singleFlight.Finish(item)
+		if probe {
+			singleFlightProbeLog("singleflight_leader_done", map[string]any{
+				"data_source_name": dataSourceName,
+				"singleflight_key": item.SFKey,
+				"duration_us":      time.Since(lookupStarted).Microseconds(),
+				"response_bytes":   len(item.response),
+				"had_error":        item.err != nil,
+			})
+		}
+	}()
 
 	// Perform the actual load
 	err := l.loadByContextDirect(ctx, source, headers, input, res)
