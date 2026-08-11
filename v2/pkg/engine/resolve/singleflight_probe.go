@@ -8,6 +8,7 @@ import (
 	"sync/atomic"
 	"time"
 
+	"github.com/buger/jsonparser"
 	"github.com/cespare/xxhash/v2"
 )
 
@@ -30,6 +31,14 @@ func singleFlightProbeMatchesDataSource(dataSourceName string) bool {
 
 func singleFlightProbeHash(input []byte) uint64 {
 	return xxhash.Sum64(input)
+}
+
+func singleFlightProbeJSONFieldHash(input []byte, path ...string) (hash string, present bool) {
+	value, _, _, err := jsonparser.Get(input, path...)
+	if err != nil {
+		return "", false
+	}
+	return fmt.Sprintf("%016x", xxhash.Sum64(value)), true
 }
 
 func singleFlightProbeLog(event string, fields map[string]any) {
