@@ -2,6 +2,7 @@ package resolve
 
 import (
 	"fmt"
+	"reflect"
 	"testing"
 
 	"github.com/cespare/xxhash/v2"
@@ -40,5 +41,39 @@ func TestSingleFlightProbeJSONFieldHash(t *testing.T) {
 				t.Fatalf("hash = %q, want %q", hash, want)
 			}
 		})
+	}
+}
+
+func TestSingleFlightProbeJSONFieldSummary(t *testing.T) {
+	input := []byte(`{"body":{"extensions":{"requestId":"secret-value","trace":{"sampled":true,"spanId":"span-secret"},"tags":["private-value"]}}}`)
+
+	fields, truncated, present := singleFlightProbeJSONFieldSummary(input, "body", "extensions")
+	if !present {
+		t.Fatal("present = false, want true")
+	}
+	if truncated {
+		t.Fatal("truncated = true, want false")
+	}
+
+	want := []singleFlightProbeJSONField{
+		{Path: "requestId", Type: "string", Hash: singleFlightProbeCanonicalJSONHash("secret-value")},
+		{Path: "tags", Type: "array", Hash: singleFlightProbeCanonicalJSONHash([]any{"private-value"})},
+		{Path: "trace", Type: "object", Hash: singleFlightProbeCanonicalJSONHash(map[string]any{"sampled": true, "spanId": "span-secret"})},
+		{Path: "trace.sampled", Type: "boolean", Hash: singleFlightProbeCanonicalJSONHash(true)},
+		{Path: "trace.spanId", Type: "string", Hash: singleFlightProbeCanonicalJSONHash("span-secret")},
+	}
+	if !reflect.DeepEqual(fields, want) {
+		t.Fatalf("fields = %#v, want %#v", fields, want)
+	}
+}
+
+func TestSingleFlightProbeJSONFieldSummaryCanonicalizesObjectOrder(t *testing.T) {
+	first := []byte(`{"body":{"extensions":{"trace":{"spanId":"same","sampled":true}}}}`)
+	second := []byte(`{"body":{"extensions":{"trace":{"sampled":true,"spanId":"same"}}}}`)
+
+	firstFields, _, _ := singleFlightProbeJSONFieldSummary(first, "body", "extensions")
+	secondFields, _, _ := singleFlightProbeJSONFieldSummary(second, "body", "extensions")
+	if !reflect.DeepEqual(firstFields, secondFields) {
+		t.Fatalf("field summaries differ for equivalent objects: %#v != %#v", firstFields, secondFields)
 	}
 }

@@ -1922,6 +1922,7 @@ func (l *Loader) loadByContext(ctx context.Context, source DataSource, fetchItem
 		queryHash, queryPresent := singleFlightProbeJSONFieldHash(input, "body", "query")
 		variablesHash, variablesPresent := singleFlightProbeJSONFieldHash(input, "body", "variables")
 		extensionsHash, extensionsPresent := singleFlightProbeJSONFieldHash(input, "body", "extensions")
+		extensionsFields, extensionsFieldsTruncated, _ := singleFlightProbeJSONFieldSummary(input, "body", "extensions")
 		embeddedHeaderHash, embeddedHeaderPresent := singleFlightProbeJSONFieldHash(input, "header")
 		singleFlightProbeLog("load_decision", map[string]any{
 			"data_source_id":                         dataSourceID,
@@ -1938,6 +1939,8 @@ func (l *Loader) loadByContext(ctx context.Context, source DataSource, fetchItem
 			"variables_present":                      variablesPresent,
 			"extensions_hash":                        extensionsHash,
 			"extensions_present":                     extensionsPresent,
+			"extensions_fields":                      extensionsFields,
+			"extensions_fields_truncated":            extensionsFieldsTruncated,
 			"embedded_header_hash":                   embeddedHeaderHash,
 			"embedded_header_present":                embeddedHeaderPresent,
 			"active_subscription_updates":            singleFlightProbeActiveSubscriptionUpdates.Load(),
