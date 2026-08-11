@@ -54,6 +54,16 @@ func singleFlightProbeJSONFieldHash(input []byte, path ...string) (hash string, 
 	return fmt.Sprintf("%016x", xxhash.Sum64(value)), true
 }
 
+func singleFlightProbeJSONFieldRaw(input []byte, path ...string) (json.RawMessage, bool) {
+	value, _, _, err := jsonparser.Get(input, path...)
+	if err != nil {
+		return nil, false
+	}
+	// Copy the slice so the logged RawMessage cannot alias a buffer that the
+	// request execution path may reuse after this probe call.
+	return json.RawMessage(bytes.Clone(value)), true
+}
+
 func singleFlightProbeCanonicalJSONHash(value any) string {
 	canonical, err := json.Marshal(value)
 	if err != nil {

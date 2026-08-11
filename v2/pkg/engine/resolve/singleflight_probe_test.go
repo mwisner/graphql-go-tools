@@ -1,6 +1,7 @@
 package resolve
 
 import (
+	"encoding/json"
 	"fmt"
 	"reflect"
 	"testing"
@@ -75,5 +76,22 @@ func TestSingleFlightProbeJSONFieldSummaryCanonicalizesObjectOrder(t *testing.T)
 	secondFields, _, _ := singleFlightProbeJSONFieldSummary(second, "body", "extensions")
 	if !reflect.DeepEqual(firstFields, secondFields) {
 		t.Fatalf("field summaries differ for equivalent objects: %#v != %#v", firstFields, secondFields)
+	}
+}
+
+func TestSingleFlightProbeJSONFieldRawEmbedsOriginalValue(t *testing.T) {
+	input := []byte(`{"body":{"extensions":{"requestId":"raw-value","trace":{"spanId":"span-value"}}}}`)
+
+	raw, present := singleFlightProbeJSONFieldRaw(input, "body", "extensions")
+	if !present {
+		t.Fatal("present = false, want true")
+	}
+	payload, err := json.Marshal(map[string]any{"extensions_raw": raw})
+	if err != nil {
+		t.Fatal(err)
+	}
+	want := `{"extensions_raw":{"requestId":"raw-value","trace":{"spanId":"span-value"}}}`
+	if string(payload) != want {
+		t.Fatalf("payload = %s, want %s", payload, want)
 	}
 }
