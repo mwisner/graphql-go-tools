@@ -2,7 +2,7 @@ package resolve
 
 import (
 	"encoding/json"
-	"log"
+	"fmt"
 	"os"
 	"strings"
 	"sync/atomic"
@@ -36,11 +36,12 @@ func singleFlightProbeLog(event string, fields map[string]any) {
 	if !singleFlightProbeEnabled() {
 		return
 	}
+	fields["component"] = "singleflight_probe"
 	fields["event"] = event
 	fields["timestamp"] = time.Now().UTC().Format(time.RFC3339Nano)
 	payload, err := json.Marshal(fields)
 	if err != nil {
 		return
 	}
-	log.Printf("[singleflight-probe] %s", payload)
+	_, _ = fmt.Fprintln(os.Stdout, string(payload))
 }
